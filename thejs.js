@@ -347,8 +347,8 @@ function myStory(parentJson,folder,addToDom)
 
 function getRedditDomain() {
   return (window.location.protocol === 'https:') ?
-    'https://pay.reddit.com' :
-    'http://www.reddit.com';
+    'https://www.reddit.com' :
+    'https://www.reddit.com';
 }
 
 function populateStory(id)
