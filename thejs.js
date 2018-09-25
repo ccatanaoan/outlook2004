@@ -393,7 +393,7 @@ function commentsCallback(storyJSON)
 	// Cloyd
 	var storyName = theStoryID.substr(3);
 	var link = getRedditDomain() + '/comments/' + storyName;
-	story.bodyHTML += '<a href="' + link + '" target="_blank">Link</a>';
+	story.bodyHTML += '<a href="' + link + '" target="_blank" class="textmain comment">Link</a>';
 	// Cloyd	
 	//add the upvote and reply for the story
 	story.bodyHTML += '<div class="uparrow storyup" id="u' + theStoryID + '"></div>';
