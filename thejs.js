@@ -396,9 +396,9 @@ function commentsCallback(storyJSON)
 	story.bodyHTML += '<br><br><a href="' + link + '" target="_blank">Link</a>';
 	// Cloyd	
 	//add the upvote and reply for the story
-	story.bodyHTML += '<div class="uparrow storyup" id="u' + theStoryID + '"></div>';
-    story.bodyHTML += '<div class="downarrow storydown" id="d' + theStoryID + '"></div>';
-	story.bodyHTML += '<a id="r' + theStoryID + '" href="javascript:void(0)" class="textreplybutton storyreply">Reply to the Link</a>';
+	//story.bodyHTML += '<div class="uparrow storyup" id="u' + theStoryID + '"></div>';
+    //story.bodyHTML += '<div class="downarrow storydown" id="d' + theStoryID + '"></div>';
+	//story.bodyHTML += '<a id="r' + theStoryID + '" href="javascript:void(0)" class="textreplybutton storyreply">Reply to the Link</a>';
 	story.bodyHTML += '<div class="storycommentline"></div>';
 	
 	//populate comments
