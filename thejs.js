@@ -32,18 +32,18 @@ var randomNames = [
 	'Irene Cassini - TS', 
 	'Sam Bell - Programs',
 	'Gerty - Automation',
-	'Edward Blake - Morale Department',
+	'Edward Blake - Operations',
 	'Dan Evans - Programs',
 	'Charlie Prince - R&D',
 	'Quentin - Programs',
 	'Jeong So-mi - Intern',
-	'Bryan Mills - Retainment Department',
+	'Bryan Mills - Operations',
 	'Rusty Ryan - Operations',
 	'Linus Caldwell - R&D',
-	'Jean-Baptiste Emanuel Zorg - VP',
-	'Father Vito Cornelius - Legacy',
+	'Jean-Baptiste Emanuel - VP',
+	'Father Cornelius - Legacy',
 	'Ruby Rhod - Marketing',
-	'Chief John Anderton - Market Prediction'
+	'John Anderton - R&D'
 	
 	];
 
