@@ -288,63 +288,6 @@ function myWindow(type, state, tofield, ccfield, subjectfield, bodyfield, isLogi
 	}
 }
 
-/* function myStory(parentJson,folder,addToDom)
-{
-	var rootJson = parentJson.data;
-	this.rootJson = rootJson;
-	this.folder = folder;
-	
-	//first make the HTML for the preview
-	//Im sure there's a better way to do this but who knows...
-	var previewHTML = '<div id="%id" class="anemail emailunread"><div class="emailicon"></div><div class="emailiconright"></div><div class="emailpreview"><div class="emailname">%randomname (%author)</div><div class="emailtitle">(RE:^%score)  %title</div></div></div>';
-	//replace all the necessary things
-	var name = getRandomName();
-	var author = rootJson.author;
-	this.id = rootJson.name;
-	var num_comments = rootJson.num_comments;
-	var score = rootJson.score;
-	this.url = rootJson.url;
-	this.title = rootJson.title;
-	//console.log(rootJson);
-
-	//if over18
-	if(rootJson.over_18)
-	{
-		if(!alwaysHideNSFW || true)
-		{
-			this.title = this.title + '<b><font style="color:red"> NSFW</font></b>';
-		}
-	}
-	
-	//theres DEF a better way to do this. too busy hackin'
-	//If you are an employer don't judge!
-	previewHTML = previewHTML.replace('%author',author);
-	previewHTML = previewHTML.replace('%randomname',name);
-	previewHTML = previewHTML.replace('%score',score);
-	previewHTML = previewHTML.replace('%title',this.title);
-	previewHTML = previewHTML.replace('%id',this.id);
-	
-	this.previewHTML = previewHTML;
-	this.bodyHTML = '';
-	
-	//now that we have id
-	folder.emailDict[this.id] = this;
-	globalStoryDict[this.id] = this;
-	
-	//add to the preview area
-	if(addToDom)
-	{
-		$('#previewarea').append(previewHTML);
-	}
-	//do body later when populating
-	
-	this.addToArea = function()
-	{
-		$('#previewarea').append(this.previewHTML);
-	}
-
-} */
-
 function myStory(parentJson, folder, addToDom) {
   var rootJson = parentJson.data;
   this.rootJson = rootJson;
@@ -447,9 +390,14 @@ function commentsCallback(storyJSON)
 	}
 	//imgur, lynx, youtube, etc
 	story.bodyHTML = unEncode(story.bodyHTML);
+	// Cloyd
+	var storyName = theStoryID.substr(3);
+	var link = getRedditDomain() + '/comments/' + storyName;
+	story.bodyHTML += '<a href="' + link + '" target="_blank">Link</a>';
+	// Cloyd	
 	//add the upvote and reply for the story
 	story.bodyHTML += '<div class="uparrow storyup" id="u' + theStoryID + '"></div>';
-     	story.bodyHTML += '<div class="downarrow storydown" id="d' + theStoryID + '"></div>';
+    story.bodyHTML += '<div class="downarrow storydown" id="d' + theStoryID + '"></div>';
 	story.bodyHTML += '<a id="r' + theStoryID + '" href="javascript:void(0)" class="textreplybutton storyreply">Reply to the Link</a>';
 	story.bodyHTML += '<div class="storycommentline"></div>';
 	
