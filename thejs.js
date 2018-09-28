@@ -600,9 +600,8 @@ function lynxexpandoClick()
 		//get the link
 		var finder2 = '#lynxlink' + tempid;
 		var thelink = $(finder2).attr('href');
-		$(finder).text('Loading... please wait :D this crap takes a while because its my server and not yahoo');
-    makePopup('whoops! Sorry I had to take down my own server, I dont support this functionality anymore, but you can go ' +
-     ' to the link here: \n ' + thelink);
+		$(finder).text('No longer supported. - Cloyd');
+    makePopup('No longer supported. - Cloyd');
     return;
 	}
 }
